@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bjardon.contextfreegrammar.application.controllers.AppController">
+   <center>
+      <AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutX="100.0" layoutY="166.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label text="Haga clic en Archivo &gt; Nuevo para comenzar" />
+               </children>
+            </HBox>
+         </children></AnchorPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#newFile" text="Nuevo" />
+                  <MenuItem mnemonicParsing="false" onAction="#openFile" text="Abrir" />
+                  <MenuItem mnemonicParsing="false" text="Guardar" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#close" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Alfabeto">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#alphabetNewSymbol" text="Nuevo simbolo" />
+                  <MenuItem mnemonicParsing="false" onAction="#alphabetSummary" text="Ver alfabeto" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Estados">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#statesNewState" text="Nuevo estado" />
+                  <MenuItem mnemonicParsing="false" onAction="#statesTransitionTable" text="Ver tabla de transiciones" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Automata">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#automataDraw" text="Dibujar automata" />
+                  <MenuItem mnemonicParsing="false" onAction="#automataSummary" text="Resumen del automata" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Cadenas">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#stringsRun" text="Validar cadenas" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
